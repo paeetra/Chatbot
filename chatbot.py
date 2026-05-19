@@ -196,9 +196,9 @@ Odgovor:
             role = m["role"].upper()
             content = m["content"]
             convo.append(f"{role}: {content}")
-        prompt_text = "\n".join(convo) + "\n\nODGOVORI NA HRVATSKOM,"
-        " koristi samo i isključivo informacije koje se mogu pronaći na web stranici udruge B.a.b.e. "
-        "Dodaj linkove na kojima se moze pronaci više informacija"
+        prompt_text = "\n".join(convo) + + "\n\nOdgovori na hrvatskom jeziku. "
+        + "Koristi samo i isključivo informacije koje se mogu pronaći na web stranici udruge B.a.B.e. "
+        + "Dodaj linkove na kojima se može pronaći više informacija."
         
         answer = call_gemini(prompt_text)
 
