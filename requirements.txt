@@ -1,0 +1,9 @@
+streamlit
+requests
+beautifulsoup4
+sentence-transformers==2.7.0
+faiss-cpu
+numpy<2
+pillow
+google-genai
+python-docx
