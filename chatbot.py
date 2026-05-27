@@ -127,6 +127,7 @@ col3, col4 = st.columns(2)
 
 selected_prompt = None
 predefined_answer=""
+user_input=""
 
 
 with col1:
