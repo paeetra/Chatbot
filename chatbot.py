@@ -259,7 +259,7 @@ Odgovor:
     else:
     
         convo = []
-        for m in st.session_state.messages [-6]:
+        for m in st.session_state.messages [-6:]:
             if m["role"] == "system":
                 continue
 
