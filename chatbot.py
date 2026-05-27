@@ -409,7 +409,7 @@ Odgovor:
             content = m["content"]
             convo.append(f"{role}: {content}")
 
-        prompt_text = "\n".join(convo) + "Odgovori na hrvatskom jeziku.Koristi samo i isključivo informacije koje se mogu pronaći na web stranici udruge B.a.B.e. Ako nisi siguran u odgovor, reci korisniku da provjeri informacije na službenoj stranici https://babe.hr/  Dodaj linkove na kojima se može pronaći više informacija."
+        prompt_text = "\n".join(convo) + "Odgovori na hrvatskom jeziku.Koristi samo i isključivo informacije koje se mogu pronaći na web stranici udruge B.a.B.e. Ako nisi siguran u odgovor, reci korisniku da provjeri informacije na službenoj stranici https://babe.hr/  Dodaj linkove na kojima se može pronaći više informacija.Nemoj izmišljati konkretne podatke, rokove, osobe, brojeve telefona ili usluge ako nisu dostupni."
         
         answer = call_gemini(prompt_text)
 
