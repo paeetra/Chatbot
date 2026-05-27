@@ -109,7 +109,15 @@ def call_gemini(prompt_text):
             text = str(response)
         return text
     except Exception as e:
-        return f"Greška pri pozivu Gemini API-ja: {e}"
+        error_text = str(e)
+
+    if "429" in error_text or "RESOURCE_EXHAUSTED" in error_text:
+        return (
+            "Trenutno je dosegnut privremeni limit za broj upita. "
+            "Pokušajte ponovno za otprilike minutu."
+        )
+
+    return f"Greška pri pozivu Gemini API-ja: {e}" 
         
 
 st.markdown("### Kako vam možemo pomoći?")
@@ -126,9 +134,10 @@ with col1:
         siguran smještaj ili savjetovanje.
         """
 
+
 with col2:
     if st.button("Želim podržati udrugu!"):
-        selected_prompt = """
+       selected_prompt = """
         Kako mogu podržati udrugu B.a.B.e.?
         Zanimaju me donacije i načini uključivanja.
         """
@@ -138,16 +147,17 @@ with col3:
         selected_prompt = """
         Koje projekte provodi udruga B.a.B.e.?
         """
-
+  
 with col4:
     if st.button("Zanimaju me aktivnosti udruge."):
         selected_prompt = """
         Koje aktivnosti provodi udruga B.a.B.e.?
         """
-
-
+     
 
 user_text = st.chat_input("Napiši poruku...", key="main_chat_input")
+
+
 
 if selected_prompt:
     user_input = selected_prompt
@@ -158,6 +168,19 @@ else:
 
 if user_input:
 
+    import time
+
+    if "last_request_time" not in st.session_state:
+        st.session_state.last_request_time = 0
+
+    now = time.time()
+    cooldown_seconds = 15
+
+    if now - st.session_state.last_request_time < cooldown_seconds:
+        st.warning("Molimo pričekajte nekoliko sekundi prije slanja novog pitanja.")
+        st.stop()
+
+    st.session_state.last_request_time = now
     
     st.session_state.messages.append({"role": "user", "content":
     user_input})
@@ -196,7 +219,7 @@ Odgovor:
             role = m["role"].upper()
             content = m["content"]
             convo.append(f"{role}: {content}")
-        prompt_text = "\n".join(convo) + "Odgovori na hrvatskom jeziku. Koristi samo i isključivo informacije koje se mogu pronaći na web stranici udruge B.a.B.e. Dodaj linkove na kojima se može pronaći više informacija."
+        prompt_text = "\n".join(convo) + "Odgovori na hrvatskom jeziku.Koristi samo i isključivo informacije koje se mogu pronaći na web stranici udruge B.a.B.e.Dodaj linkove na kojima se može pronaći više informacija."
         
         answer = call_gemini(prompt_text)
 
