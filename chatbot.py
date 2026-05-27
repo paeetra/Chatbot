@@ -126,6 +126,7 @@ col1, col2 = st.columns(2)
 col3, col4 = st.columns(2)
 
 selected_prompt = None
+predefined_answer=""
 
 with col1:
    # if st.button("Trebam pomoć!"):
