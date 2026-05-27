@@ -137,6 +137,10 @@ with col1:
      #   siguran smještaj ili savjetovanje.
      #   """
      if st.button("Trebam pomoć!"):
+        selected_prompt = """
+        Trebam pomoć vezanu uz pravnu ili psihološku podršku,
+        siguran smještaj ili savjetovanje. """
+
         predefined_answer = """
             Drago nam je što ste nam se obratili. 💜
 
@@ -206,6 +210,11 @@ with col2:
       #  Zanimaju me donacije i načini uključivanja.
        # """
         if st.button("Želim podržati udrugu!"):
+
+            selected_prompt = """
+       Kako mogu podržati udrugu B.a.B.e.?
+       Zanimaju me donacije i načini uključivanja.
+        """
             predefined_answer = """
           Udrugu B.a.B.e. možete podržati na nekoliko načina, prvenstveno kroz donacije i uključivanje kao pojedinac ili poduzeće.
 
@@ -245,6 +254,9 @@ with col3:
     #    """
   
     if st.button("Zanimaju me projekti koje udruga provodi."):
+        selected_prompt= """
+    #    Koje projekte provodi udruga B.a.B.e.?
+    #    """
         predefined_answer = """
 
     Hvala Vam na zanimanju za rad naše udruge! Vrlo nam je drago što ste se obratili s ovim pitanjem, jer volimo dijeliti informacije o našim aktivnostima.
@@ -279,6 +291,10 @@ with col4:
    #     Koje aktivnosti provodi udruga B.a.B.e.?
     #    """
          if st.button("Zanimaju me aktivnosti udruge."):
+            selected_prompt = """
+        Koje aktivnosti provodi udruga B.a.B.e.?
+        """
+            
             predefined_answer = """
             Udruga B.a.B.e. provodi širok spektar aktivnosti usmjerenih na zaštitu i promicanje ljudskih prava žena, prevenciju rodno uvjetovanog nasilja i podršku žrtvama.
 
@@ -341,6 +357,12 @@ user_text = st.chat_input("Napiši poruku...", key="main_chat_input")
 #if selected_prompt:
     #user_input = selected_prompt
 if predefined_answer:
+
+    # prikaži pitanje korisnika
+    st.session_state.messages.append({
+        "role": "user",
+        "content": selected_prompt
+    })
 
     st.session_state.messages.append({
         "role": "assistant",
@@ -409,7 +431,7 @@ Odgovor:
             content = m["content"]
             convo.append(f"{role}: {content}")
 
-        prompt_text = "\n".join(convo) + "Odgovori na hrvatskom jeziku.Koristi samo i isključivo informacije koje se mogu pronaći na web stranici udruge B.a.B.e. Ako nisi siguran u odgovor, reci korisniku da provjeri informacije na službenoj stranici https://babe.hr/  Dodaj linkove na kojima se može pronaći više informacija.Nemoj izmišljati konkretne podatke, rokove, osobe, brojeve telefona ili usluge ako nisu dostupni."
+        prompt_text = "\n".join(convo) + "Odgovori na hrvatskom jeziku.Koristi samo i isključivo informacije koje se mogu pronaći na web stranici udruge B.a.B.e. Ako nisi siguran u odgovor, reci korisniku da provjeri informacije na službenoj stranici https://babe.hr/  Dodaj linkove na kojima se može pronaći više informacija."
         
         answer = call_gemini(prompt_text)
 
