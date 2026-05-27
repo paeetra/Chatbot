@@ -254,20 +254,16 @@ with col3:
     Evo nekih od naših trenutnih projekata koje biste mogli pronaći zanimljivima, a koji su detaljnije opisani na našoj web stranici:
 
     • Putokaz za poštivanje ženskih ljudska prava
-    Više informacija:
-    https://babe.hr/projekt/putokaz-za-postivanje-zenskih-ljudska-prava/
+    Više informacija: https://babe.hr/projekt/putokaz-za-postivanje-zenskih-ljudska-prava/
 
     • Surf & Sound 2.0 (Support, Unite, Respond, Fight to Stop Online violence)
-    Više informacija:
-https://babe.hr/projekt/surf-sound-2-0-support-unite-respond-fight-to-stop-online-violence/
+    Više informacija: https://babe.hr/projekt/surf-sound-2-0-support-unite-respond-fight-to-stop-online-violence/
    
      • Savjetovalište za prevenciju i suzbijanje svih oblika nasilnog ponašanja u obitelji
-    Više informacija:
-https://babe.hr/projekt/savjetovaliste-za-prevenciju-i-suzbijanje-svih-oblika-nasilnog-ponasanja-u-obitelji-2/
+    Više informacija: https://babe.hr/projekt/savjetovaliste-za-prevenciju-i-suzbijanje-svih-oblika-nasilnog-ponasanja-u-obitelji-2/
 
     • Mi to možemo! - mladi ljudi kao nosioci promjena za bolju budućnost i zdravije društvo
-    Više informacija:
-https://babe.hr/projekt/mi-to-mozemo-mladi-ljudi-kao-nosioci-promjena-za-bolju-buducnost-i-zdravije-drustvo/
+    Više informacija: https://babe.hr/projekt/mi-to-mozemo-mladi-ljudi-kao-nosioci-promjena-za-bolju-buducnost-i-zdravije-drustvo/
 
 
     Osim navedenih projekata, udruga B.a.B.e. kontinuirano pruža i druge oblike podrške, poput rada SOS linije za žene i djecu žrtve nasilja, pružanje besplatne pravne i psihosocijalne pomoći, te provođenje edukacija i zagovaračkih aktivnosti s ciljem podizanja svijesti o važnosti ravnopravnosti i borbe protiv svih oblika diskriminacije.
