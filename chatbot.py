@@ -128,39 +128,81 @@ col3, col4 = st.columns(2)
 selected_prompt = None
 
 with col1:
-    if st.button("Trebam pomoć!"):
-        selected_prompt = """
-        Trebam pomoć vezanu uz pravnu ili psihološku podršku,
-        siguran smještaj ili savjetovanje.
-        """
+   # if st.button("Trebam pomoć!"):
+    #    selected_prompt = """
+     #   Trebam pomoć vezanu uz pravnu ili psihološku podršku,
+     #   siguran smještaj ili savjetovanje.
+     #   """
+     if st.button("Trebam pomoć!"):
+        predefined_answer = """
+            Ako trebate pravnu ili psihološku pomoć, siguran smještaj ili savjetovanje, možete se obratiti udruzi B.a.B.e.
+
+            Više informacija:
+            https://babe.hr/pravna-i-psiholoska-pomoc/
+
+            SOS linija:
+            0800 200 144
+
+            Sigurna kuća:
+            https://babe.hr/smjestaj-u-sigurnoj-kuci/
+            """
 
 
 with col2:
-    if st.button("Želim podržati udrugu!"):
-       selected_prompt = """
-        Kako mogu podržati udrugu B.a.B.e.?
-        Zanimaju me donacije i načini uključivanja.
-        """
+    # if st.button("Želim podržati udrugu!"):
+     #  selected_prompt = """
+     #   Kako mogu podržati udrugu B.a.B.e.?
+      #  Zanimaju me donacije i načini uključivanja.
+       # """
+        if st.button("Želim podržati udrugu!"):
+            predefined_answer = """
+            Hvala vam na interesu za podršku udruzi B.a.B.e. 💜
+
+            Informacije o donacijama i načinima podrške možete pronaći ovdje:
+            https://babe.hr/donacije/
+            """
+       
 
 with col3:
-    if st.button("Zanimaju me projekti koje udruga provodi."):
-        selected_prompt = """
-        Koje projekte provodi udruga B.a.B.e.?
-        """
+   # if st.button("Zanimaju me projekti koje udruga provodi."):
+    #    selected_prompt = """
+    #    Koje projekte provodi udruga B.a.B.e.?
+    #    """
   
-with col4:
-    if st.button("Zanimaju me aktivnosti udruge."):
-        selected_prompt = """
-        Koje aktivnosti provodi udruga B.a.B.e.?
+    if st.button("Zanimaju me projekti koje udruga provodi."):
+        predefined_answer = """
+        Udruga B.a.B.e. provodi različite projekte usmjerene na ljudska prava, ravnopravnost i podršku ženama.
+
+        Više o projektima možete pronaći ovdje:
+        https://babe.hr/ostali-projekti/
         """
-     
+
+with col4:
+   # if st.button("Zanimaju me aktivnosti udruge."):
+   #     selected_prompt = """
+   #     Koje aktivnosti provodi udruga B.a.B.e.?
+    #    """
+         if st.button("Zanimaju me aktivnosti udruge."):
+            predefined_answer = """
+            Aktivnosti udruge B.a.B.e. obuhvaćaju savjetovanje, edukacije, podršku ženama i društveno korisne inicijative.
+
+            Više informacija:
+            https://babe.hr/
+            """
 
 user_text = st.chat_input("Napiši poruku...", key="main_chat_input")
 
 
 
-if selected_prompt:
-    user_input = selected_prompt
+#if selected_prompt:
+    #user_input = selected_prompt
+if predefined_answer:
+
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": predefined_answer
+    })
+
 elif user_text:
     user_input = user_text
 else:
@@ -215,18 +257,24 @@ Odgovor:
     else:
     
         convo = []
-        for m in st.session_state.messages:
+        for m in st.session_state.messages [-6]:
+            if m["role"] == "system":
+                continue
+
             role = m["role"].upper()
             content = m["content"]
             convo.append(f"{role}: {content}")
-        prompt_text = "\n".join(convo) + "Odgovori na hrvatskom jeziku.Koristi samo i isključivo informacije koje se mogu pronaći na web stranici udruge B.a.B.e.Dodaj linkove na kojima se može pronaći više informacija."
+
+        prompt_text = "\n".join(convo) + "Odgovori na hrvatskom jeziku.Koristi samo i isključivo informacije koje se mogu pronaći na web stranici udruge B.a.B.e. Ako nisi siguran u odgovor, reci korisniku da provjeri informacije na službenoj stranici https://babe.hr/  Dodaj linkove na kojima se može pronaći više informacija."
         
         answer = call_gemini(prompt_text)
 
 
-    
-    st.session_state.messages.append({"role": "assistant", "content":
-    answer})
+### ovo ostaje i u novom kodu    
+    st.session_state.messages.append({
+        "role": "assistant", 
+        "content": answer})
+
 
 for msg in st.session_state.messages:
 
