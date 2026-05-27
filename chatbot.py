@@ -127,7 +127,7 @@ col3, col4 = st.columns(2)
 
 selected_prompt = None
 predefined_answer=""
-user_input=""
+
 
 with col1:
    # if st.button("Trebam pomoć!"):
@@ -137,16 +137,64 @@ with col1:
      #   """
      if st.button("Trebam pomoć!"):
         predefined_answer = """
-            Ako trebate pravnu ili psihološku pomoć, siguran smještaj ili savjetovanje, možete se obratiti udruzi B.a.B.e.
+            Drago nam je što ste nam se obratili. 💜
+
+            Ako prolazite kroz teško razdoblje, trebate pravnu ili psihološku pomoć, savjetovanje ili siguran smještaj, niste sami.
+
+            Udruga B.a.B.e. pruža podršku ženama i djeci žrtvama nasilja te osobama koje se suočavaju s različitim oblicima diskriminacije i kršenja ljudskih prava.
+
+            Naša podrška uključuje:
+
+            1. Pravnu pomoć i savjetovanje
+
+            • Pravno zastupanje pred institucijama i sudovima
+
+            • Pravne informacije i stručne savjete
+
+            • Pomoć pri razumijevanju vaših prava i mogućnosti zaštite
+
+            2. Psihološku i psihosocijalnu podršku
+
+            • Psihološko savjetovanje
+
+            • Emocionalnu podršku tijekom teških situacija
+
+            • Psihosocijalnu pomoć kroz rad stručnog tima
+
+            3. Savjetovalište
+
+            • Godišnje pružamo oko 2000 pravnih i psiholoških savjetovanja osobama u potrebi.
+
+            4. Pratnju od povjerenja
+
+            • Pružamo podršku i pratnju tijekom prijava nasilja i drugih postupaka kako biste kroz proces prošli uz podršku osobe od povjerenja.
+
+            5. Siguran smještaj
+
+            • Sigurna kuća udruge B.a.B.e. pruža utočište ženama i djeci žrtvama obiteljskog nasilja.
+
+            Kontakt podaci:
+
+            📞 SOS linija:
+            0800 200 144
+
+            📧 E-mail:
+            babe@babe.hr
+
+            📞 Sigurna kuća:
+            032 414 910
+            098 9824 641
+            📧 E-mail: 
+            sigurnakucavsz@babe.hr
+
 
             Više informacija:
             https://babe.hr/pravna-i-psiholoska-pomoc/
 
-            SOS linija:
-            0800 200 144
-
             Sigurna kuća:
             https://babe.hr/smjestaj-u-sigurnoj-kuci/
+
+            Nemojte čekati! Javite nam se. Tu smo kako bismo Vas saslušali, pružili podršku i pomogli Vam pronaći siguran put dalje.
             """
 
 
@@ -158,9 +206,33 @@ with col2:
        # """
         if st.button("Želim podržati udrugu!"):
             predefined_answer = """
-            Hvala vam na interesu za podršku udruzi B.a.B.e. 💜
+          Udrugu B.a.B.e. možete podržati na nekoliko načina, prvenstveno kroz donacije i uključivanje kao pojedinac ili poduzeće.
 
-            Informacije o donacijama i načinima podrške možete pronaći ovdje:
+            Donacije:
+            Kao pojedinac, vašom donacijom možete pomoći žrtvama obiteljskog nasilja i drugih oblika kršenja ljudskih prava. Donacije omogućavaju kontinuirano pružanje zaštite, savjeta i podrške.
+
+            Postoje dva načina za pružanje podrške jednokratnom donacijom:
+
+            1. Skeniranjem 2D koda:
+            Sami možete odabrati iznos svoje donacije.
+
+            2. Uplatom na IBAN račun udruge B.a.B.e.:
+
+            • Primatelj:
+            B.a.B.e., Budi aktivna. Budi emancipiran.
+
+            • Adresa:
+            Selska cesta 112a, 10000 Zagreb
+
+            • Banka:
+            Raiffeisen Bank Austria
+
+            • IBAN:
+            HR8324840081100866793
+
+            Vašom donacijom pomažete u radu savjetovališta koje na godišnjoj razini pruža 2000 pravnih i psiholoških savjetovanja osoba u potrebi. Također, podržavate Sigurnu kuću udruge B.a.B.e. koja pruža utočište i zaštitu ženama i djeci u najtežim situacijama kada im je potrebno skloniti se od nasilnika.
+
+            Više informacija:
             https://babe.hr/donacije/
             """
        
@@ -173,10 +245,35 @@ with col3:
   
     if st.button("Zanimaju me projekti koje udruga provodi."):
         predefined_answer = """
-        Udruga B.a.B.e. provodi različite projekte usmjerene na ljudska prava, ravnopravnost i podršku ženama.
 
-        Više o projektima možete pronaći ovdje:
-        https://babe.hr/ostali-projekti/
+    Hvala Vam na zanimanju za rad naše udruge! Vrlo nam je drago što ste se obratili s ovim pitanjem, jer volimo dijeliti informacije o našim aktivnostima.
+
+    Udruga B.a.B.e. provodi niz važnih projekata usmjerenih na zaštitu ženskih prava, borbu protiv rodno uvjetovanog nasilja i promicanje rodne ravnopravnosti u svim sferama društva. Naši projekti obuhvaćaju širok spektar aktivnosti, od izravne podrške žrtvama nasilja do zagovaranja promjena u zakonodavstvu i podizanja svijesti javnosti.
+
+    Evo nekih od naših trenutnih projekata koje biste mogli pronaći zanimljivima, a koji su detaljnije opisani na našoj web stranici:
+
+    • Putokaz za poštivanje ženskih ljudska prava
+    Više informacija:
+    https://babe.hr/projekt/putokaz-za-postivanje-zenskih-ljudska-prava/
+
+    • Surf & Sound 2.0 (Support, Unite, Respond, Fight to Stop Online violence)
+    Više informacija:
+https://babe.hr/projekt/surf-sound-2-0-support-unite-respond-fight-to-stop-online-violence/
+   
+     • Savjetovalište za prevenciju i suzbijanje svih oblika nasilnog ponašanja u obitelji
+    Više informacija:
+https://babe.hr/projekt/savjetovaliste-za-prevenciju-i-suzbijanje-svih-oblika-nasilnog-ponasanja-u-obitelji-2/
+
+    • Mi to možemo! - mladi ljudi kao nosioci promjena za bolju budućnost i zdravije društvo
+    Više informacija:
+https://babe.hr/projekt/mi-to-mozemo-mladi-ljudi-kao-nosioci-promjena-za-bolju-buducnost-i-zdravije-drustvo/
+
+
+    Osim navedenih projekata, udruga B.a.B.e. kontinuirano pruža i druge oblike podrške, poput rada SOS linije za žene i djecu žrtve nasilja, pružanje besplatne pravne i psihosocijalne pomoći, te provođenje edukacija i zagovaračkih aktivnosti s ciljem podizanja svijesti o važnosti ravnopravnosti i borbe protiv svih oblika diskriminacije.
+
+    Za detaljnije informacije o svim našim trenutnim projektima, kao i o arhivi završenih projekata, pozivamo vas da posjetite našu web stranicu, točnije stranicu posvećenu projektima:
+
+    https://www.babe.hr/projekti
         """
 
 with col4:
@@ -186,9 +283,57 @@ with col4:
     #    """
          if st.button("Zanimaju me aktivnosti udruge."):
             predefined_answer = """
-            Aktivnosti udruge B.a.B.e. obuhvaćaju savjetovanje, edukacije, podršku ženama i društveno korisne inicijative.
+            Udruga B.a.B.e. provodi širok spektar aktivnosti usmjerenih na zaštitu i promicanje ljudskih prava žena, prevenciju rodno uvjetovanog nasilja i podršku žrtvama.
 
-            Više informacija:
+            Naše aktivnosti obuhvaćaju:
+
+            1. Pravna i psihološka podrška i savjetovanje
+
+            • Pravno zastupanje:
+            Pružamo pravno zastupanje pred javnopravnim tijelima, uključujući sudove, te pred Europskim sudom za ljudska prava u Strasbourgu.
+
+            • Pravni savjeti i informacije:
+            Pružamo stručne pravne savjete i informacije osobama u potrebi.
+
+            • Psihološka pomoć:
+            Dostupna je psihološka pomoć i savjetovanje za žrtve nasilja i kršenja ljudskih prava.
+
+            • Savjetovalište:
+            Naše savjetovalište godišnje pruža oko 2000 pravnih i psiholoških savjetovanja.
+
+            • Pratnja od povjerenja:
+            Od 2020. godine pružamo uslugu pratnje osobe od povjerenja žrtvama kaznenih djela i prekršaja, osiguravajući emocionalnu i psihološku potporu tijekom prijave nasilja i drugih postupaka.
+
+            • Psihosocijalna podrška:
+            Stručni tim (socijalna radnica, psihologinja, sociologinja) pruža psihosocijalnu podršku žrtvama rodno uvjetovanog nasilja radi egzistencijalne zaštite i oporavka.
+
+            2. Siguran smještaj
+
+            • Sigurna kuća:
+            Osiguravamo smještaj u Sigurnoj kući koja je utočište i zaštita ženama žrtvama obiteljskog nasilja i njihovoj djeci, pružajući im sigurno sklonište od nasilnika. Boravak u Sigurnoj kući može trajati do godinu dana.
+
+            3. Kampanje i inicijative
+
+            • Aktivno sudjelujemo u javnim kampanjama i inicijativama usmjerenim na podizanje svijesti o problemu rodno uvjetovanog nasilja, diskriminaciji i potrebi za ravnopravnošću spolova.
+
+            • Zagovaramo promjene zakona i javnih politika kako bismo osigurali bolju zaštitu i prava žena.
+
+            4. Edukacija i prevencija
+
+            • Organiziramo seminare, radionice i edukativne programe za stručnjake i širu javnost s ciljem prevencije nasilja, edukacije o ljudskim pravima i promicanja rodne ravnopravnosti.
+
+            5. Projekti
+
+            • Udruga provodi brojne projekte, često u suradnji s domaćim i međunarodnim partnerima, koji su usmjereni na specifične aspekte borbe protiv diskriminacije, promicanja ravnopravnosti, podrške žrtvama i jačanja kapaciteta civilnog društva.
+
+            Sve ove aktivnosti usmjerene su na ostvarenje naše misije – izgradnje društva u kojem su žene sigurne, ravnopravne i slobodne od svih oblika diskriminacije i nasilja.
+
+            Više informacija o našim aktivnostima i projektima možete pronaći na našoj web stranici:
+
+            • Pravna i psihološka pomoć:
+            https://babe.hr/pravna-i-psiholoska-pomoc/
+
+            Više informacija o radu udruge:
             https://babe.hr/
             """
 
@@ -259,7 +404,7 @@ Odgovor:
     else:
     
         convo = []
-        for m in st.session_state.messages [-6:]:
+        for m in st.session_state.messages [-6]:
             if m["role"] == "system":
                 continue
 
