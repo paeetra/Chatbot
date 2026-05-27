@@ -111,13 +111,13 @@ def call_gemini(prompt_text):
     except Exception as e:
         error_text = str(e)
 
-    if "429" in error_text or "RESOURCE_EXHAUSTED" in error_text:
-        return (
-            "Trenutno je dosegnut privremeni limit za broj upita. "
-            "Pokušajte ponovno za otprilike minutu."
-        )
+        if "429" in error_text or "RESOURCE_EXHAUSTED" in error_text:
+            return (
+                "Trenutno je dosegnut privremeni limit za broj upita. "
+                "Pokušajte ponovno za otprilike minutu."
+            )
 
-    return f"Greška pri pozivu Gemini API-ja: {e}" 
+        return f"Greška pri pozivu Gemini API-ja: {e}" 
         
 
 st.markdown("### Kako vam možemo pomoći?")
@@ -401,7 +401,7 @@ Odgovor:
     else:
     
         convo = []
-        for m in st.session_state.messages [-6:]:
+        for m in st.session_state.messages [-6]:
             if m["role"] == "system":
                 continue
 
